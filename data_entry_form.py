@@ -65,24 +65,7 @@ if st.session_state.confirm_delete:
             st.session_state.confirm_delete = False
             st.rerun()  # Cancel and refresh
 
-# --- Custom CSS for the "Clear Form" button ---
-st.markdown("""
-    <style>
-    /* Target the specific container for the Clear Form button */
-    .clear-form-button > button {
-        background-color: white;
-        color: black;
-        border: 1px solid #28a745;
-        font-weight: bold;
-        transition: background-color 0.3s, color 0.3s;
-    }
 
-    .clear-form-button > button:hover {
-        background-color: #28a745;
-        color: white;
-    }
-    </style>
-""", unsafe_allow_html=True)
 
 
 # Button to clear the form manually
