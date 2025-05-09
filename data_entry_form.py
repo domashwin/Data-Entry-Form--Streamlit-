@@ -4,6 +4,7 @@ import os
 import csv
 import pyzipper
 import io 
+import datetime
 
 
 st.write(
@@ -102,7 +103,7 @@ with st.form("Data Entry", clear_on_submit=False, enter_to_submit=False):
     crp_val = st.text_input("CRP", value=st.session_state.CRP)
     hb_val = st.text_input("Hb", value=st.session_state.Hb)
     mrn_val = st.text_input("MRN", value=st.session_state.MRN)
-    dob_val = st.date_input("DOB", value=st.session_state.DOB)
+    dob_val = st.date_input("DOB", value=st.session_state.DOB, min_value= datetime.date(1900, 1, 1))
     complete_checkbox = st.checkbox("Mark form as completed", value=st.session_state.Completed)
 
     submitted = st.form_submit_button("Submit", type='secondary')
