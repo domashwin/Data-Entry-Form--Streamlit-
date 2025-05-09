@@ -41,8 +41,10 @@ if "confirm_delete" not in st.session_state:
     st.session_state.confirm_delete = False
 
 # Delete button logic
-if st.button("Delete CSV File", type="primary"):
+if st.button("Delete Session Data", type="primary"):
     st.session_state.confirm_delete = True
+
+st.write("Please delete session data prior to closing the app")
 
 # Show confirmation step
 if st.session_state.confirm_delete:
