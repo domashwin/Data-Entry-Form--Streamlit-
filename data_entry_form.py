@@ -161,7 +161,7 @@ st.write(df.tail(3))
 csv_data = df.to_csv(index=False)
 
 
-# Password for the ZIP file (this is an example, use your preferred password)
+# Password for the ZIP file (example, remmember to remove from main app after testing)
 password = "aau1962"
 
 
@@ -185,5 +185,5 @@ st.download_button(
 )
 
 # Display the password (for demonstration purposes)
-# In practice, the password should be provided securely and privately
+# In practice, the password would be known - or send via secure email e.g.
 st.write("Password for the ZIP file", password)
